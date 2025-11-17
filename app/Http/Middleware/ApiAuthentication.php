@@ -68,7 +68,7 @@ class ApiAuthentication
     private function isValidApiKeyFormat(string $apiKey): bool
     {
         // API key should be at least 32 characters long and contain only alphanumeric characters
-        return preg_match('/^[a-zA-Z0-9]{32,}$/', $apiKey);
+        return preg_match('/^[A-Za-z0-9_-]{8,}$/', $apiKey);
     }
 
     /**
